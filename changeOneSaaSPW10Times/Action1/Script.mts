@@ -9,19 +9,19 @@ currUser = startingUser
 Const desiredPW = "PpmOctane00"
 Const tempPW = "Nov2020_"
 
-InitialPWN = 2
+InitialPWN = 1
 curPW = tempPW & InitialPWN
 
 ' initial reset
-'Browser("Micro Focus Software -").Page("Micro Focus Software -").WebEdit("password1").Set curPW
-'Browser("Micro Focus Software -").Page("Micro Focus Software -").WebEdit("password2").Set curPW @@ hightlight id_;_Browser("Micro Focus Software -").Page("Micro Focus Software -").WebEdit("password2")_;_script infofile_;_ZIP::ssf30.xml_;_
-'Browser("Micro Focus Software -").Page("Micro Focus Software -_2").WebButton("Save").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("Micro Focus Software - 2").WebButton("Save")_;_script infofile_;_ZIP::ssf31.xml_;_
-'Browser("Micro Focus Software -").Page("MyAccount - My Products").Link("MyAccount").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - My Products").Link("MyAccount")_;_script infofile_;_ZIP::ssf32.xml_;_
-'Browser("Micro Focus Software -").Page("MyAccount - My Products").WebElement("WebElement").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - My Products").WebElement("WebElement")_;_script infofile_;_ZIP::ssf33.xml_;_
-'Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("WebElement").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("WebElement")_;_script infofile_;_ZIP::ssf34.xml_;_
-'Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("My Authentication Settings").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("My Authentication Settings")_;_script infofile_;_ZIP::ssf35.xml_;_
-'
-For Iterator = InitialPWN To 12 Step 1 ' now go up to 12
+Browser("Micro Focus Software -").Page("Micro Focus Software -").WebEdit("password1").Set curPW
+Browser("Micro Focus Software -").Page("Micro Focus Software -").WebEdit("password2").Set curPW @@ hightlight id_;_Browser("Micro Focus Software -").Page("Micro Focus Software -").WebEdit("password2")_;_script infofile_;_ZIP::ssf30.xml_;_
+Browser("Micro Focus Software -").Page("Micro Focus Software -_2").WebButton("Save").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("Micro Focus Software - 2").WebButton("Save")_;_script infofile_;_ZIP::ssf31.xml_;_
+Browser("Micro Focus Software -").Page("MyAccount - My Products").Link("MyAccount").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - My Products").Link("MyAccount")_;_script infofile_;_ZIP::ssf32.xml_;_
+Browser("Micro Focus Software -").Page("MyAccount - My Products").WebElement("WebElement").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - My Products").WebElement("WebElement")_;_script infofile_;_ZIP::ssf33.xml_;_
+Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("WebElement").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("WebElement")_;_script infofile_;_ZIP::ssf34.xml_;_
+Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("My Authentication Settings").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("MyAccount - User Details").WebElement("My Authentication Settings")_;_script infofile_;_ZIP::ssf35.xml_;_
+
+For Iterator = InitialPWN  To 12 Step 1 ' now go up to 12
 	curPW = tempPW & Iterator
 	nextPW = tempPW & Iterator + 1
 	Browser("Micro Focus Software -").Page("Micro Focus - Authentication").Link("Change").Click @@ hightlight id_;_Browser("Micro Focus Software -").Page("Micro Focus - Authentication").Link("Change")_;_script infofile_;_ZIP::ssf36.xml_;_
