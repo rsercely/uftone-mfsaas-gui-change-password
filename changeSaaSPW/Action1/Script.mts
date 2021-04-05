@@ -1,7 +1,9 @@
-﻿' assumes browser is open
-Const startingUser = 1
-const currPW = "Training2020"
-Const newPW = "Hackathon2020!"
+﻿' assumes Chrome browser is open
+' page does not matter
+
+Const startingUser = 4
+const newPW = "Training2020!"
+Const currPW = "Hackathon2020!"
 currUser = startingUser
 
 For currUser = startingUser To 30 Step 1
@@ -20,7 +22,8 @@ For currUser = startingUser To 30 Step 1
 	Browser("Google").Page("Login - MyAccount").WebEdit("password").Set currPW
 	Browser("Google").Page("Login - MyAccount").WebButton("SIGN IN").Click	
 		
-	If not Browser("Google").Page("Micro Focus - Change Password_2"). _
+	' the following if block may no longer be needed
+	If Browser("Google").Page("Micro Focus - Change Password_2"). _
 		WebElement("Your password has expired,").Exist (5) then	' the following lines execute if the current password is not expired
 		Browser("Google").Page("MyAccount - My Products").WebElement("WebElement").Click @@ hightlight id_;_Browser("Google").Page("MyAccount - My Products").WebElement("WebElement")_;_script infofile_;_ZIP::ssf7.xml_;_
 		Browser("Google").Page("MyAccount - My Products").WebElement("Email notifications for").WaitProperty "innertext", "Email notifications for the 'ADM Workshops' account", 10000
@@ -44,6 +47,6 @@ For currUser = startingUser To 30 Step 1
 		Browser("Google").Page("Micro Focus - Authentication_2").Link("Back >").Click @@ hightlight id_;_Browser("Google").Page("Micro Focus - Authentication 2").Link("Back >")_;_script infofile_;_ZIP::ssf24.xml_;_
 	end if
 	Browser("Google").Page("MyAccount - My Products").WebButton("LogOut").Click
-	Browser("Google").Home @@ hightlight id_;_2885574_;_script infofile_;_ZIP::ssf18.xml_;_
+'	Browser("Google").home - says not supported. runs without it @@ hightlight id_;_2885574_;_script infofile_;_ZIP::ssf18.xml_;_
 	
 Next

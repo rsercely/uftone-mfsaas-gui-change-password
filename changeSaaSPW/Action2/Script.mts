@@ -1,6 +1,8 @@
 ﻿' assumes browser is open
-Const startingUser = 1
-Const newPW = "Hackathon2020!"
+Const startingUser = 30
+Const newPW = "Training2021!"
+Const curPW = "Hackathon2020!"
+
 currUser = startingUser
 
 For currUser = startingUser To 30 Step 1
@@ -9,6 +11,7 @@ For currUser = startingUser To 30 Step 1
 	else
 		userStr = "workshop" & currUser & "@microfocus.com"
 	End If
+	exittest
 	
 	Browser("Saas Browser").Navigate "https://home.software.microfocus.com/myaccount/#/myProducts" @@ hightlight id_;_1837230_;_script infofile_;_ZIP::ssf2.xml_;_
 	Browser("Saas Browser").Page("Login - MyAccount").WebEdit("federateLoginName").Set userStr

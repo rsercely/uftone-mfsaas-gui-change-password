@@ -33,14 +33,13 @@ Lang=none
 
 [TulipInfo]
 ProductName=Micro Focus Unified Functional Testing
-Version=15.0.1
+Version=15.0.2
 
 [TulipAddins]
 AI=
 Database=
 File Content=
 Insight=
-SAP=
 Windows Applications=
 TEA=
 Web=
